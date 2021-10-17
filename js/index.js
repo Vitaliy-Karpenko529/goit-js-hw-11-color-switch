@@ -7,17 +7,19 @@ const colors = [
   '#795548',
 ];
 
+let isActive = false
+let intervalId = null
+
 const refs = {
-    startButton: document.querySelector('data-action', "start"),
-    stopButton: document.querySelector('data-action', "stop"),
+    startButton: document.querySelector('[data-action="start"]'),
+    stopButton: document.querySelector('[data-action="stop"]'),
     bodyRefs: document.querySelector('body')
 }
 
 refs.startButton.addEventListener('click', startChangeColor)
 refs.stopButton.addEventListener('click', stopChangeColor)
 
-let isActive = false
-let intervalId = null
+
 
 function changeColorBody() {
     refs.bodyRefs.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)]
