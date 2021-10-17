@@ -8,9 +8,9 @@ const colors = [
 ];
 
 const refs = {
-    startButton = document.querySelector('data-action', "start"),
-    stopButton = document.querySelector('data-action', "stop"),
-    bodyRefs = document.querySelector('body')
+    startButton: document.querySelector('data-action', "start"),
+    stopButton: document.querySelector('data-action', "stop"),
+    bodyRefs: document.querySelector('body')
 }
 
 refs.startButton.addEventListener('click', startChangeColor)
